@@ -1,1 +1,1 @@
-from autz.config.config import Config
+from authz.config.config import Config
