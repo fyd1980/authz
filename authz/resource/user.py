@@ -1,33 +1,18 @@
 from flask_restful import Resource
-
-USERS = [
-    {
-        "id": "89877878",
-        "username": "admin"
-    },
-    {
-        "id": "89877858",
-        "username": "test"
-    },
-    {
-        "id": "89577878",
-        "username": "farid"
-    },
-]
-
+from authz.controller import UserController
 
 class UserResource(Resource):
     def get(self, user_id=None):
         if user_id is None:
-            return USERS
+            return UserController.get_users()
         else:
-            return USERS[int(user_id)]
+            return UserController.get_user()
 
     def post(self):
-        pass
+        UserController.create_user()
 
     def patch(self, user_id):
-        pass
+        UserController.update_user()
 
     def delete(self, user_id):
-        pass
+        UserController.delete_user()
