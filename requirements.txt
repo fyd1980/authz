@@ -1,5 +1,4 @@
 aniso8601==9.0.1
-click==7.1.2
 Flask==1.1.2
 Flask-RESTful==0.3.8
 itsdangerous==1.1.0
